@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+  font-family: 'Rubik', sans-serif;
+}
+
+@keyframes move-right {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+#arrow-icon {
+  transition: transform 0.2s ease-in-out;
+}
+
+#arrow-icon.clicked {
+  animation: move-right 0.5s linear forwards;
+}
